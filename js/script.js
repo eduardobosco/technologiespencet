@@ -155,55 +155,40 @@ $(document).ready(function () {
         }
     }
 
-    //login
-    mobiscroll.settings = {
-    theme: 'ios',
-    themeVariant: 'light'
-};
+    // scroll para as seções
 
-var account = mobiscroll.popup('#demo', {
-        display: 'center'
-    }),
-    popup = mobiscroll.popup('#list', {
-        display: 'center',
-        onSet: function (event, inst) {
-            var checked = document.querySelector('input[name="update"]:checked');
-            document.getElementById('showPopup').value = checked ? checked.value : '';
-        }
-    }),
-    scrollable = mobiscroll.popup('#scrollable', {
-        display: 'center',
-        scrollLock: false,
-        cssClass: 'mbsc-no-padding md-content-scroll',
-        buttons: []
-    });
+  let navBtn = $('.nav-item');
 
-mobiscroll.listview('#listview', {
-    enhance: true,
-    swipe: false,
-    onItemTap: function () {
-        scrollable.hide();
-        mobiscroll.toast({
-            message: event.target.textContent + ' clicked'
-        });
+  let bannerSection = $('#mainSlider');
+  let aboutSection = $('#about-area');
+  let servicesSection = $('#services-area');
+  let teamSection = $('#team-area');
+  let portfolioSection = $('#portfolio-area');
+  let contactSection = $('#contact-area');
+
+  let scrollTo = '';
+
+  $(navBtn).click(function() {
+
+    let btnId = $(this).attr('id');
+
+    if(btnId == 'about-menu') {
+      scrollTo = aboutSection;
+    } else if(btnId == 'services-menu') {
+      scrollTo = servicesSection;
+    } else if(btnId == 'team-menu') {
+      scrollTo = teamSection;
+    } else if(btnId == 'portfolio-menu') {
+      scrollTo = portfolioSection;
+    } else if(btnId == 'contact-menu') {
+      scrollTo = contactSection;
+    } else {
+      scrollTo = bannerSection;
     }
+
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(scrollTo).offset().top - 70
+    }, 1500);
 });
-
-document
-    .getElementById('showAccount')
-    .addEventListener('click', function () {
-        account.show();
-    }, false);
-
-document
-    .getElementById('showPopup')
-    .addEventListener('click', function () {
-        popup.show();
-    }, false);
-
-document
-    .getElementById('showScrollable')
-    .addEventListener('click', function () {
-        scrollable.show();
-    }, false);
+    
 });
