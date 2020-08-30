@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     //Progress bar
     let containerA = document.getElementById("circleA");
@@ -11,7 +11,7 @@ $(document).ready(function () {
         from: { color: '#AAA' },
         to: { color: '#65DAF9' },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
 
             let value = Math.round(circle.value() * 60);
@@ -33,7 +33,7 @@ $(document).ready(function () {
         from: { color: '#AAA' },
         to: { color: '#65DAF9' },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
 
             let value = Math.round(circle.value() * 254);
@@ -55,7 +55,7 @@ $(document).ready(function () {
         from: { color: '#AAA' },
         to: { color: '#65DAF9' },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
 
             let value = Math.round(circle.value() * 32);
@@ -77,7 +77,7 @@ $(document).ready(function () {
         from: { color: '#AAA' },
         to: { color: '#65DAF9' },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
 
             let value = Math.round(circle.value() * 5243);
@@ -88,11 +88,13 @@ $(document).ready(function () {
 
 
     });
+
     //iniciando o loader quando o usuario chega no elemento
+
     let dataAreaOffset = $('#data-area').offset();
     let stop = 0;
 
-    $(window).scroll(function (e) {
+    $(window).scroll(function(e) {
 
         let scroll = $(window).scrollTop();
         if (scroll > (dataAreaOffset.top - 500) && stop == 0) {
@@ -111,7 +113,8 @@ $(document).ready(function () {
     //Parallax
 
     //carregar as imagens primeiro
-    setTimeout(function () {
+
+    setTimeout(function() {
 
         $('#data-area').parallax({ imageSrc: 'img/cidadeparallax.png' });
         $('#apply-area').parallax({ imageSrc: 'img/pattern.png' });
@@ -120,7 +123,7 @@ $(document).ready(function () {
 
     // Filtro portfólio
 
-    $('.filter-btn').on('click', function () {
+    $('.filter-btn').on('click', function() {
 
         let type = $(this).attr('id');
         let boxes = $('.project-box');
@@ -145,7 +148,7 @@ $(document).ready(function () {
         if (type == 'all') {
             $(boxes).fadeIn();
         } else {
-            $(boxes).each(function () {
+            $(boxes).each(function() {
                 if (!$(this).hasClass(type)) {
                     $(this).fadeOut('slow');
                 } else {
@@ -157,38 +160,39 @@ $(document).ready(function () {
 
     // scroll para as seções
 
-  let navBtn = $('.nav-item');
+    let navBtn = $('.nav-item');
 
-  let bannerSection = $('#mainSlider');
-  let aboutSection = $('#about-area');
-  let servicesSection = $('#services-area');
-  let teamSection = $('#team-area');
-  let portfolioSection = $('#portfolio-area');
-  let contactSection = $('#contact-area');
+    let bannerSection = $('#mainSlider');
+    let aboutSection = $('#about-area');
+    let servicesSection = $('#services-area');
+    let teamSection = $('#team-area');
+    let portfolioSection = $('#portfolio-area');
+    let contactSection = $('#contact-area');
 
-  let scrollTo = '';
+    let scrollTo = '';
 
-  $(navBtn).click(function() {
+    $(navBtn).click(function() {
 
-    let btnId = $(this).attr('id');
+        let btnId = $(this).attr('id');
 
-    if(btnId == 'about-menu') {
-      scrollTo = aboutSection;
-    } else if(btnId == 'services-menu') {
-      scrollTo = servicesSection;
-    } else if(btnId == 'team-menu') {
-      scrollTo = teamSection;
-    } else if(btnId == 'portfolio-menu') {
-      scrollTo = portfolioSection;
-    } else if(btnId == 'contact-menu') {
-      scrollTo = contactSection;
-    } else {
-      scrollTo = bannerSection;
-    }
+        if (btnId == 'about-menu') {
+            scrollTo = aboutSection;
+        } else if (btnId == 'services-menu') {
+            scrollTo = servicesSection;
+        } else if (btnId == 'team-menu') {
+            scrollTo = teamSection;
+        } else if (btnId == 'portfolio-menu') {
+            scrollTo = portfolioSection;
+        } else if (btnId == 'contact-menu') {
+            scrollTo = contactSection;
+        } else {
+            scrollTo = bannerSection;
+        }
 
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $(scrollTo).offset().top - 70
-    }, 1500);
-});
-    
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(scrollTo).offset().top - 70
+        }, 1500);
+    });
+
+
 });
