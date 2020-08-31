@@ -12,6 +12,7 @@ class Validator {
         ]
     }
 
+
     // inicia a validação de todos os campos
     validate(form) {
 
