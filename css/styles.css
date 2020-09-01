@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    padding: 70px 0;
+    padding: 60px 0;
 }
 
 p,
@@ -234,6 +234,11 @@ header,
 
 .card-body {
     text-align: center;
+}
+
+.card {
+    margin-left: 10px;
+    position: center;
 }
 
 
@@ -531,10 +536,13 @@ header,
     }
     /*Time*/
     .card-title {
-        font-size: 14px;
+        font-size: 11px;
     }
     .card-text {
-        font-size: 12px;
+        display: none;
+    }
+    .card {
+        width: 100px;
     }
     /*Apply*/
     #apply-area .apply-box {
@@ -592,9 +600,15 @@ header,
         width: 50%;
     }
     /*Time*/
-    #team-area .col-md-3 {
+    #team-area .col-md-2 {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .card {
+        width: 160px;
+    }
+    .card-title {
+        font-size: 18px;
     }
     /*Apply*/
     #aaply-area {
@@ -636,6 +650,7 @@ header,
     /* contact */
     .contact-box {
         border: none;
+        width: 50%;
         margin-bottom: 0;
     }
 }
