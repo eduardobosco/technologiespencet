@@ -41,7 +41,7 @@
                         <a class="nav-item nav-link" id="services-menu">Serviços</a>
                         <a class="nav-item nav-link" id="team-menu">Time</a>
                         <a class="nav-item nav-link" id="portfolio-menu">Projetos</a>
-                        <a class="nav-item nav-link" id="contact-menu">Contato</a>
+                        <a href="" class="nav-item nav-link" id="contact-menu">Contato</a>
                         <a href="#" class="main-btn" id="login-menu">Entrar</a>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                             <form id="access-form" action="">
                                 <div class="full-box">
                                     <label for="email">E-mail</label>
-                                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" data-email-validate>
+                                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-min-length="2" onchange="" data-email-validate>
                                 </div>
                                 <div class="half-box spacing">
                                     <label for="name">Nome</label>
@@ -108,51 +108,6 @@
         </div>
     </main>
     <footer>
-        <div id="contact-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="main-title">Entre em contato conosco</h3>
-                    </div>
-                    <div class="col-md-4 contact-box">
-                        <i class="fas fa-phone"></i>
-                        <p><span class="contact-title">Ligue para:</span> (24)99999-9999</p>
-                        <p><span class="contact-title">Horários:</span> 8:00 - 19:00</p>
-                    </div>
-                    <div class="col-md-4 contact-box">
-                        <i class="fas fa-envelope"></i>
-                        <p><span class="contact-title">Envie um email:</span> contato@pencet.com.br</p>
-                    </div>
-                    <div class="col-md-4 contact-box">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p><span class="contact-title">Venha tomar um café:</span> Rua Lorem Ipsum - 1314</p>
-                    </div>
-                    <div class="col-md-4 contact-box">
-                        <i class="fab fa-facebook-f"></i>
-                        <p><span class="contact-title">Facebok</span></p>
-                    </div>
-                    <div class="col-md-4 contact-box">
-                        <i class="fab fa-google-plus-g"></i>
-                        <p><span class="contact-title">Google +</span></p>
-                    </div>
-                    <div class="col-md-4 contact-box">
-                        <i class="fab fa-linkedin-in"></i>
-                        <p><span class="contact-title">Linkedin</span></p>
-                    </div>
-                    <div class="col-md-6" id="msg-box">
-                        <p>Deixe uma mensagem:</p>
-                    </div>
-                    <div class="col-md-6" id="contact-form">
-                        <form action="">
-                            <input type="email" class="form-control" placeholder="E-mail" name="email">
-                            <input type="text" class="form-control" placeholder="Assunto" name="subject">
-                            <textarea class="form-control" rows="3" placeholder="Sua mensagem..." name="message"></textarea>
-                            <input type="submit" class="main-btn">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div id="copy-area">
             <div class="container">
                 <div class="row">
@@ -164,6 +119,7 @@
         </div>
     </footer>
     <!--Scripts-->
+    <p class="error-validation template"></p>
     <script src="js/scriptlogin.js"></script>
 </body>
 

@@ -98,7 +98,7 @@ class Validator {
 
         let email = input.value;
 
-        let errorMessage = `Insira um e-mail no padrão matheus@email.com`;
+        let errorMessage = `Insira um e-mail no padrão nome@email.com`;
 
         if (!re.test(email)) {
             this.printMessage(input, errorMessage);
@@ -187,6 +187,9 @@ class Validator {
 let form = document.getElementById('access-form');
 let submit = document.getElementById('btn-submit');
 
+let form1 = document.getElementById('register-form');
+let submit1 = document.getElementById('btn-register');
+
 let validator = new Validator();
 
 // evento de envio do form, que valida os inputs
@@ -194,4 +197,11 @@ submit.addEventListener('click', function(e) {
     e.preventDefault();
 
     validator.validate(form);
+
+});
+
+submit1.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    validator.validate(form1);
 });
