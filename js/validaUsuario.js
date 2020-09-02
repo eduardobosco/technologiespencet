@@ -19,13 +19,5 @@ function ValidaUsuario(user, pass) {
 
     let usuarios = [{ nome: "Caio Marques", user: "cmarques", pass: "1234" }, { nome: "Paulo Santos", user: "psantos", pass: "4321" }]
 
-    return usuarios.filter(function(usuario) { return usuario.user == user && usuario.pass == pass });
+    return usuarios.filter(usuario => usuario.user == user && usuario.pass == pass);
 }
-
-
-
-var hello;
-
-hello = () => "Hello World!";
-
-document.getElementById("demo").innerHTML = hello();

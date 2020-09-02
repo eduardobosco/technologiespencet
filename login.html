@@ -52,12 +52,16 @@
                             <h3>Login de Usuário</h3>
                             <form id="register-form" action="">
                                 <div class="full-box">
-                                    <label for="user">Usuário</label>
-                                    <input type="text" name="user" id="user" placeholder="Digite seu usuario" data-min-length="2">
+                                    <label for="placa">E-mail</label>
+                                    <input type="email" name="email" id="email" title="Campo Obrigatorio" required pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Digite seu e-mail">
                                 </div>
-                                <div class="half-box spacing">
+                                <div class="full-box">
+                                    <label for="user">Usuário</label>
+                                    <input type="text" name="user" id="user" title="Campo Obrigatorio" required placeholder="Digite seu usuario" data-min-length="2">
+                                </div>
+                                <div class="full-box">
                                     <label for="lastname">Senha</label>
-                                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                                    <input type="password" name="password" id="password" title="Campo Obrigatorio" required placeholder="Digite sua senha">
                                 </div>
                                 <div class="full-box">
                                     <input onclick="Login()" id="btn-register" type="submit" value="Acessar">
