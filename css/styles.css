@@ -416,6 +416,11 @@ header,
     text-align: center;
 }
 
+.contact-box a {
+    text-decoration: none;
+    color: #65DAF9
+}
+
 .contact-box {
     padding-bottom: 50px;
     margin-bottom: 50px;
