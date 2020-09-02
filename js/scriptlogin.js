@@ -192,6 +192,16 @@ let submit1 = document.getElementById('btn-register');
 
 let validator = new Validator();
 
+function validaUsuario(user, pass) {
+    console.log(user);
+    console.log(pass);
+    let usuarios = [{ nome: "Roberto Barbosa", email: "pencet@pencet.com", pass: "Pencet1" }, { nome: "Caio Marques", email: "contato@pencet.com", pass: "Pencet2" }];
+    let usuario = usuarios.filter(usuarios.email == user && usuarios.pass == pass);
+    return usuario;
+    console.log(usuario);
+
+};
+
 // evento de envio do form, que valida os inputs
 submit.addEventListener('click', function(e) {
     e.preventDefault();
@@ -200,8 +210,13 @@ submit.addEventListener('click', function(e) {
 
 });
 
-submit1.addEventListener('click', function(e) {
-    e.preventDefault();
+submit1.addEventListener('click', validaUsuario);
+alert(teste);
 
-    validator.validate(form1);
-});
+validator.validate(form1);
+let email = document.getElementById("email2").value;
+let pass = document.getElementById("password2").value;
+
+// let userLogado = validaUsuario(email, pass);
+// alert(`Bem vindo ${userLogado[0].nome}`);
+//  setTimeout(function() { window.location.href = "index.html", 3000 });
