@@ -103,5 +103,28 @@ input:hover[type="submit"] {
     border: transparent;
 }
 
+@media(max-width: 768px) {
+    /* geral */
+    /* diminuir espaco das divs*/
+    .card {
+        padding: 0px;
+        width: auto;
+    }
+    .card h3 {
+        font-size: 18px;
+    }
+    #iconUser {
+        width: 200px;
+        margin-left: 70px;
+        margin-top: 80px;
+    }
+}
 
-/**/
+@media(max-width: 425px) {
+    input[type="submit"] {
+        width: 120px;
+    }
+    #iconUser {
+        display: none;
+    }
+}
