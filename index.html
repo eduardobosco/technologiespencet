@@ -22,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </head>
 
-<body>
+<body onload="setDisabled()">
     <header>
         <div class="container" id="nav-container">
             <!-- add essa class -->
@@ -42,6 +42,7 @@
                         <a class="nav-item nav-link" id="portfolio-menu">Projetos</a>
                         <a class="nav-item nav-link" id="contact-menu">Contato</a>
                         <a href="login.html" class="main-btn" id="login-menu">Entrar</a>
+                        <a onclick="sair()" class="main-btn" id="logout-menu">Sair</a>
                     </div>
                 </div>
             </nav>
@@ -368,7 +369,7 @@
                     </div>
                     <div class="col-md-6" id="contact-form">
                         <form action="">
-                            <input type="email" class="form-control" placeholder="E-mail" name="email">
+                            <input type="email" class="form-control" name="email" title="Campo Obrigatorio" required pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Digite seu e-mail">
                             <input type="text" class="form-control" placeholder="Assunto" name="subject">
                             <textarea class="form-control" rows="3" placeholder="Sua mensagem..." name="message"></textarea>
                             <input type="submit" class="main-btn">
@@ -389,6 +390,7 @@
     </footer>
     <!--Scripts-->
     <script src="js/script.js"></script>
+    <script src="js/validaUsuario.js"></script>
 </body>
 
 </html>

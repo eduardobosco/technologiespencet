@@ -69,6 +69,7 @@ header,
     border: 3px solid transparent;
     transition: .5s;
     font-size: 14px;
+    text-align: center;
 }
 
 #navbar-links .main-btn a {

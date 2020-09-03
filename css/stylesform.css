@@ -31,6 +31,10 @@ body {
     margin-top: 80px;
 }
 
+.navbar .main-btn {
+    display: none;
+}
+
 
 /* form */
 
